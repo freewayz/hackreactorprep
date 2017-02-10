@@ -1,7 +1,7 @@
 function getElementsThatEqual10AtProperty(obj, key) {
   // your code here
   var result = [];
-  if (!obj.hasOwnProperty(key)) {
+  if (!obj.hasOwnProperty(key) || !(obj[key] instanceof Array)) {
       return [];
   }
 
