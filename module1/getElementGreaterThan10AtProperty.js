@@ -1,0 +1,28 @@
+function getElementsGreaterThan10AtProperty(obj, key) {
+  // your code here
+  var result = [];
+  if (!obj.hasOwnProperty(key) || !(obj[key] instanceof Array)) {
+      return [];
+  }
+
+  var objectArray = obj[key];
+  if (objectArray.length <= 0){
+      return [];
+  }
+  return objectArray.filter(greaterThanTen, [])
+  
+}
+
+function greaterThanTen(val) {
+    return val > 10;
+}
+
+var obj = {
+  key: [1000, 10, 50, 10]
+};
+
+var obj2 = {
+  key: [1, 2, 50, 100]
+};
+var output = getElementsGreaterThan10AtProperty(obj2, 'key');
+console.log(output);
