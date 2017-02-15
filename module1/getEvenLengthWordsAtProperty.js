@@ -15,7 +15,7 @@ function getEvenLengthWordsAtProperty(obj, key) {
 
 
 function isWordLengthEven(word) {
-    return word.length % 2 == 0;
+    return word.length % 2 === 0;
 }
 
 
